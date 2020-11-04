@@ -15,14 +15,23 @@ class CalculatorViewController: UIViewController {
     */
     @IBOutlet weak var billTextField: UITextField!
     
-    @IBOutlet weak var zeroPercentButton: UIButton!
+
     
     @IBOutlet weak var tenPercentButton: UIButton!
+    @IBOutlet weak var fifteenPercentButton: UIButton!
     
     @IBOutlet weak var twentyPercentButton: UIButton!
     
     @IBOutlet weak var splitNumberLabel: UILabel!
     
+    @IBOutlet weak var twentyFivePctButton: UIButton!
+    @IBOutlet weak var thirtyPctButton: UIButton!
+    @IBOutlet weak var thirtyFivePctButton: UIButton!
+    @IBOutlet weak var fortyPctButton: UIButton!
+    @IBOutlet weak var fortyFivePctButton: UIButton!
+    @IBOutlet weak var fiftyPctButton: UIButton!
+    
+
     var tip = 0.10
     var numberOfPeople = 2
     var billTotal = 0.0
@@ -36,9 +45,17 @@ class CalculatorViewController: UIViewController {
         
         //You can have a property called 'isSelected' to make a button have a background and appear selected. When you tap on any of the tip buttons, it shows selected. Setting it to false deselects.
         
-        zeroPercentButton.isSelected = false
+        fifteenPercentButton.isSelected = false
         tenPercentButton.isSelected = false
         twentyPercentButton.isSelected = false
+        twentyFivePctButton.isSelected = false
+        thirtyPctButton.isSelected = false
+        thirtyFivePctButton.isSelected = false
+        fortyPctButton.isSelected = false
+        fortyFivePctButton.isSelected = false
+        fiftyPctButton.isSelected = false
+        
+        
         sender.isSelected = true
         
         //calculating the tip changing from String(dropping the last element in that collection (the % sign)) to an integer which is a Double so that we may calculate it using tip = buttonTitleAsANumber / 100 ... i.e. 20% selected so tip = 20/100 = 0.2
